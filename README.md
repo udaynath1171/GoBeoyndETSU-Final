@@ -20,7 +20,8 @@ GoBeyondClassroom is a web application project for the students, faculty, and de
 
 5.	Scope:
  
-![image](https://github.com/udaynath1171/GoBeoyndETSU1/assets/85257415/ad7cca0e-2f74-466a-bbcc-ee9c62d5f348)
+<img width="540" alt="image" src="https://github.com/udaynath1171/GoBeoyndETSU1/assets/85257415/8cf56870-7a92-4a19-ab61-979242485556">
+
 
 6.	User Roles:
 •	Administrator – Will verify and approve the client, faculty and students and have access to make necessary changes.
