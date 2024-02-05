@@ -1,0 +1,135 @@
+<div class="selector">
+  <div class="container">
+    <div class="row justify-content-center login-card">
+      <div class="card" style="width: 40rem">
+        <div class="row login-card justify-content-center">
+          <div class="mylogo col-6">
+            <img id="mylogo" src="assets/gobeyond-logo.png" alt="" />
+          </div>
+        </div>
+        <div class="header-content">
+          <h1 class="heading">Sign Up</h1>
+          <p class="sub-heading">Create your GoBeyondClassroom account</p>
+        </div>
+        <div class="card-body">
+          <form
+            class="login-form"
+            [formGroup]="signupForm"
+            (ngSubmit)="signup()"
+          >
+            <div class="form-group">
+              <!-- Enter name -->
+              <mat-form-field
+                class="form-input"
+                appearance="fill"
+                style="margin-right: 10px"
+              >
+                <mat-label>Username</mat-label>
+                <input
+                  type="email"
+                  name="username"
+                  matInput
+                  placeholder="Ex. pat@example.com"
+                  required
+                />
+                <mat-error *ngIf="email?.invalid" style="color: red">{{
+                  getErrorMessage()
+                }}</mat-error> </mat-form-field
+              ><br />
+
+              <!-- Enter email -->
+              <mat-form-field class="form-input" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input
+                  type="email"
+                  name="username"
+                  matInput
+                  placeholder="Ex. pat@example.com"
+                  required
+                />
+                <mat-error *ngIf="email?.invalid" style="color: red">{{
+                  getErrorMessage()
+                }}</mat-error> </mat-form-field
+              ><br />
+            </div>
+
+            <div class="form-group">
+              <!-- Enter password -->
+              <mat-form-field
+                class="form-input"
+                appearance="fill"
+                style="margin-right: 10px"
+              >
+                <mat-label>Password</mat-label>
+                <input
+                  matInput
+                  [type]="hide ? 'password' : 'text'"
+                  formControlName="password"
+                  required
+                />
+                <mat-error
+                  *ngIf="signupForm.get('password')?.hasError('required')"
+                  >Password is required</mat-error
+                >
+                <mat-error
+                  *ngIf="signupForm.get('password')?.hasError('minlength')"
+                  >Password must be at least 8 characters</mat-error
+                >
+                <mat-error
+                  *ngIf="
+                    signupForm.get('password')?.hasError('invalidPassword')
+                  "
+                  >Invalid password pattern</mat-error
+                > </mat-form-field
+              ><br />
+
+              <!-- Confirm password -->
+              <mat-form-field class="form-input" appearance="fill">
+                <mat-label>Confirm Password</mat-label>
+                <input
+                  matInput
+                  [type]="hide ? 'password' : 'text'"
+                  formControlName="confirmPassword"
+                  required
+                />
+                <mat-error *ngIf="signupForm.hasError('passwordMismatch')"
+                  >Passwords do not match</mat-error
+                > </mat-form-field
+              ><br />
+            </div>
+
+            <!-- User Role dropdown -->
+            <mat-form-field class="form-input" appearance="fill">
+              <mat-label>User Role</mat-label>
+              <mat-select formControlName="role" required>
+                <mat-option value="admin">Admin</mat-option>
+                <mat-option value="student">Student</mat-option>
+                <mat-option value="faculty">Faculty</mat-option>
+                <mat-option value="client">Client</mat-option>
+              </mat-select> </mat-form-field
+            ><br />
+
+            <!-- Skills -->
+            <mat-form-field class="form-input" appearance="fill">
+              <mat-label>Skills</mat-label>
+              <mat-select [formControl]="skills" multiple>
+                <mat-option
+                  *ngFor="let skill of skillOptions"
+                  [value]="skill"
+                  >{{ skill }}</mat-option
+                >
+              </mat-select> </mat-form-field
+            ><br />
+            <button class="sign-in-btn btn btn-primary" type="submit">
+              Signup
+            </button>
+          </form>
+          <div class="sign-up">
+            Already have an account?
+            <a [routerLink]="['/login']" class="sign-up-btn"><b>Login</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

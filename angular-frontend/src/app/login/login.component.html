@@ -1,0 +1,70 @@
+<div class="selector">
+  <div class="container">
+    <div class="row justify-content-center login-card">
+      <div class="card" style="width: 28rem">
+        <div class="row login-card justify-content-center">
+          <div class="mylogo col-6">
+            <img id="mylogo" src="assets/gobeyond-logo.png" alt="" />
+          </div>
+        </div>
+        <div class="header-content">
+          <h1 class="heading">Login</h1>
+          <p class="welcome-back">Hi, Welcome back!👋</p>
+        </div>
+        <div class="card-body">
+          <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+            <mat-form-field class="form-input" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input
+                type="email"
+                name="username"
+                matInput
+                placeholder="Ex. pat@example.com"
+                required
+              />
+              <mat-error *ngIf="email?.invalid" style="color: red">{{
+                getErrorMessage()
+              }}</mat-error> </mat-form-field
+            ><br />
+
+            <mat-form-field class="form-input" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input
+                matInput
+                [type]="hide ? 'password' : 'text'"
+                formControlName="password"
+                required
+              />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+              >
+                <mat-icon>{{
+                  hide ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </mat-form-field>
+            <br />
+
+            <a
+              href=""
+              class="forgot-password"
+              data-cie-control-urn="forgot-password-btn"
+              >Forgot password?</a
+            ><br />
+            <button class="sign-in-btn btn btn-primary" type="submit">
+              Login
+            </button>
+          </form>
+          <div class="sign-up">
+            Not registered yet?
+            <a [routerLink]="['/signup']" class="sign-up-btn"><b>Sign Up</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

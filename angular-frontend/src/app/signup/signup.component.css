@@ -1,0 +1,152 @@
+/* Global Styles */
+.background-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+}
+
+/* Logo Styles */
+#mylogo {
+  width: 20%;
+  margin-left: 35%;
+  margin-bottom: -1%;
+  margin-top: 3%;
+}
+
+@media screen and (max-width: 1024px) {
+  .background-img {
+    height: 100%;
+    width: 100%;
+  }
+
+  #mylogo {
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+}
+
+/* Card Styles */
+.card {
+  background-color: #303030;
+  color: white;
+  /* border: 1px solid #ddd; */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header-content {
+  margin-left: 3%;
+}
+
+/* Button Styles */
+.sign-in-btn {
+  background-color: #ff8c00;
+  color: white;
+  text-align: center;
+  margin-top: 3%;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 5%;
+  cursor: pointer;
+}
+.welcome-back {
+  margin-left: 5%;
+  margin-top: -5%;
+  margin-bottom: 6%;
+  color: darkgray;
+}
+
+.sign-up {
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 7%;
+}
+.heading {
+  margin-top: 3%;
+  font-size: 32px;
+  margin-bottom: 2%;
+  margin-left: 5%;
+}
+
+.sub-heading {
+  margin-left: 5%;
+  margin-bottom: 3%;
+  color: darkgray;
+}
+
+.sign-up-btn,
+.forgot-password {
+  color: #ff8c00;
+  padding-left: 1%;
+}
+
+.forgot-password,
+.sign-up-btn {
+  text-decoration: none;
+}
+
+.form-input {
+  width: 100%;
+}
+
+:host
+  ::ng-deep
+  .mat-mdc-form-field:not(.mat-form-field-disabled)
+  .mat-mdc-floating-label.mdc-floating-label {
+  font-size: 13px;
+}
+
+.selector {
+  background-color: #303030;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  padding-left: 8%;
+  width: 80%;
+}
+
+mat-icon {
+  color: #333;
+}
+.form-group {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  min-width: -webkit-fill-available;
+}
+body {
+  background-color: #303030;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
