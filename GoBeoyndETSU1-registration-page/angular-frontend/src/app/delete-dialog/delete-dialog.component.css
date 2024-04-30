@@ -1,0 +1,13 @@
+.btn-delete-yes {
+  color: #ff8c00;
+  /* background-color: #e1e1e1; */
+}
+.btn-delete-no {
+  color: #ff8c00;
+  margin-left: 3%;
+}
+.dialog-align {
+  margin-right: 2%;
+  margin-top: -3%;
+  float: inline-end;
+}

@@ -1,0 +1,22 @@
+<div mat-dialog-content>
+  <!-- form for applying -->
+  <textarea
+    matInput
+    placeholder="Comments"
+    class="comments-textarea"
+    #commentInput
+  ></textarea>
+</div>
+<div mat-dialog-actions class="dialog-align">
+  <button
+    mat-button
+    [mat-dialog-close]="true"
+    (click)="submitFormData(commentInput.value)"
+    class="btn-apply-submit"
+  >
+    Submit
+  </button>
+  <button mat-button [mat-dialog-close]="false" class="btn-apply-cancel">
+    Cancel
+  </button>
+</div>

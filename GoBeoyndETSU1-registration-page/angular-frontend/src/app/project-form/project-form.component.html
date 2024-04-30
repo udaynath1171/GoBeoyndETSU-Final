@@ -1,0 +1,62 @@
+<form [formGroup]="projectForm" (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input
+      type="text"
+      id="title"
+      formControlName="title"
+      class="form-control"
+    />
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea
+      id="description"
+      formControlName="description"
+      class="form-control"
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="expectedStartDate">Expected Start Date</label>
+    <input
+      type="date"
+      id="expectedStartDate"
+      formControlName="expectedStartDate"
+      class="form-control"
+    />
+  </div>
+  <div class="form-group">
+    <label for="expectedCompletionDate">Expected Completion Date</label>
+    <input
+      type="date"
+      id="expectedCompletionDate"
+      formControlName="expectedCompletionDate"
+      class="form-control"
+    />
+  </div>
+  <div class="form-group">
+    <label for="additionalDocumentation">Additional Documentation</label>
+    <input
+      type="file"
+      id="additionalDocumentation"
+      formControlName="additionalDocumentation"
+      class="form-control"
+    />
+  </div>
+  <div class="form-group">
+    <label for="technologies">Technologies</label>
+    <mat-select
+      id="technologies"
+      formControlName="technologies"
+      multiple
+      class="form-control"
+    >
+      <mat-option
+        *ngFor="let technology of technologyOptions"
+        [value]="technology"
+        >{{ technology.name }}</mat-option
+      >
+    </mat-select>
+  </div>
+  <button type="submit" mat-raised-button class="button-clr">Submit</button>
+</form>

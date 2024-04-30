@@ -1,0 +1,9 @@
+To bring up the frontend
+
+Open you terminal -- 
+1. Make sure you are in angular-frontend directory.
+2. Run docker build -t gobeyond-frontend .
+3. Once the above one is done, please run docker run -p 8080:80 gobeyond-frontend
+4. You can access the website on localhost with default port 8080.
+
+We will compose the docker once we have the backend ready for this.

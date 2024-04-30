@@ -1,0 +1,11 @@
+<mat-toolbar *ngIf="isLoggedIn" class="nav">
+  <button mat-button routerLink="/home">Go Beyond</button>
+  <button mat-button routerLink="/home">Home</button>
+  <button mat-button routerLink="/projects">My Projects</button>
+  <button *ngIf="isAdmin" mat-button routerLink="/approval-dashboard">
+    Approval Dashboard
+  </button>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/login" (click)="logout()">logout</button>
+  <!-- Add more navigation buttons as needed -->
+</mat-toolbar>
