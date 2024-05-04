@@ -1,0 +1,40 @@
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5%;
+  margin-bottom: 5% !important;
+  padding-right: 3%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 20px;
+}
+.chip-list {
+  margin-bottom: 10px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.4em 0.7em;
+  margin: 0.2em;
+  background-color: #e0e0e0;
+  border-radius: 16px;
+  font-size: 14px;
+}
+.button-clr {
+  background-color: #ff8c00;
+}
